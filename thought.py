@@ -27,7 +27,7 @@ def random_thought():
         return render_template('./support/page.html',
                                thought=random.choice([thought for thought
                                                       in f.readlines()
-                                                      if thought.strip()])
+                                                      if thought.strip()]))
 
 '''
 WSGI entry point. Intended to be called by a WSGI-compliant web server.
