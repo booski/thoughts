@@ -23,8 +23,8 @@ Render a random thought from the list.
 Returns the thought rendered as an html document based on a template.
 '''
 def random_thought():
-    with open('./articles/Random thoughts') as f, \
-         open('./support/page.html') as template:
+    with open('./articles/Random thoughts', encoding='UTF-8') as f, \
+         open('./support/page.html', encoding='UTF-8') as template:
         return render_template(template.read(),
                                thought=random.choice([thought for thought
                                                       in f.readlines()
